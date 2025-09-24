@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(180deg, blue, #4facfe);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 0 0 15px 15px;
+}
+
+
+header h1 {
+  font-size: 2.2rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+header span{
+  font-size: 20px;
+}
+
+.grupo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;  
+}
+
+.item img{
+  width: 9rem;
+  margin:  0 10px;
+  height: auto;
+  border-radius: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  box-shadow: 10px 4px 10px rgb(3, 255, 230);
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  
+}
+
+.item p{
+  text-align: center;
+  margin-top: 10px;
+}
+/* Seções */
+main, section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #222;
+
+}
+
+/* Grid Layout - Destaques */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Flexbox - Artigos */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.flex .card {
+  flex: 1 1 300px;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 10px 10px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img, 
+.card video {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 0.8rem;
+}
+
+audio {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #fff;
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #555;
+}
