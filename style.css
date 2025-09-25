@@ -9,7 +9,7 @@ body {
   font-family: Arial, sans-serif;
   color: #333;
   line-height: 1.4;
-  background-color: rgb(47, 255, 57);
+  background: linear-gradient(100deg, green, white) 
 }
 
 /* Cabeçalho */
@@ -142,12 +142,13 @@ section h2 {
 }
 
 .card img, 
-.card video {
+.conteudo video {
   width: 100%;
   border-radius: 8px;
   margin-top: 0.8rem;
   display: block;
   object-fit: cover;
+  
 }
 
 audio {
