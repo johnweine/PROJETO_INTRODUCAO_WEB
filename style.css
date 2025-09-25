@@ -9,6 +9,7 @@ body {
   font-family: Arial, sans-serif;
   color: #333;
   line-height: 1.4;
+  background-color: rgb(47, 255, 57);
 }
 
 /* Cabeçalho */
@@ -34,6 +35,7 @@ header span{
   font-size: 20px;
 }
 
+/* Fotos do grupo */
 .grupo {
   display: flex;
   justify-content: center;
@@ -41,28 +43,33 @@ header span{
   flex-wrap: wrap;  
 }
 
+.item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  transition: transform 0.2 ease;
+}
+
 .item img{
-  width: 9rem;
+  width: 8rem;
   margin:  0 10px;
-  height: auto;
+  height: 12rem;
   border-radius: 100%;
   object-fit: cover;
   overflow: hidden;
   box-shadow: 10px 4px 10px rgb(3, 255, 230);
 }
 
-.item{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-  
-}
-
 .item p{
   text-align: center;
   margin-top: 10px;
 }
+
+.item:hover{
+  transform: translate(-5px);
+}
+
 /* Seções */
 main, section {
   max-width: 1100px;
@@ -82,8 +89,10 @@ section h2 {
 /* Grid Layout - Destaques */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  justify-items: stretch;
+  grid-auto-rows: 1fr ;
 }
 
 /* Flexbox - Artigos */
@@ -103,13 +112,33 @@ section h2 {
   background: white;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 10px 10px 6px rgba(0,0,0,0.1);
+  box-shadow: 16px 16px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
+.foto_musica{
+  margin-top: auto;
 }
 
 .card:hover {
   transform: translateY(-5px);
+}
+
+.artigos .card{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: row-reverse;
+}
+
+.artigos .card video{
+  max-width: 500px;
+  height: auto;
+  width: auto;
+  flex-shrink: 0;
 }
 
 .card img, 
@@ -117,6 +146,8 @@ section h2 {
   width: 100%;
   border-radius: 8px;
   margin-top: 0.8rem;
+  display: block;
+  object-fit: cover;
 }
 
 audio {
